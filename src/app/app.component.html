@@ -1,0 +1,77 @@
+<h3>Admin Menu</h3>
+<ul >
+    <li><a routerLink="admin/list">List</a></li>
+    <li><a routerLink="admin/login">Login</a></li>
+
+</ul>
+<hr> 
+<div class="cards" style="background-color: red;"><router-outlet></router-outlet></div>
+
+<hr> 
+<h3>User Menu</h3>
+<ul >
+    <li><a routerLink="user/list">List</a></li>
+    <li><a routerLink="user/login">Login</a></li>
+
+</ul>
+<hr> 
+<div class="cards" style="background-color: red; color: #fff; font-size: 30px;"><router-outlet></router-outlet></div>
+
+<hr> 
+<app-header> </app-header>
+<app-customer></app-customer>
+<app-associate></app-associate>
+<app-supplier></app-supplier>
+<app-components1></app-components1>
+<app-popup></app-popup>
+
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+   -->
+<table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of userlist">
+        <td>
+            {{item.userId}}</td>
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.completed}}</td>
+            
+            
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of emplist">
+        <td>
+            {{emp.userId}}</td>
+            <td>{{emp.id}}</td>
+            <td>{{emp.title}}</td>
+            <td>{{emp.completed}}</td>
+            
+            
+      </tr>
+    </tbody>
+  </table>
+
+
